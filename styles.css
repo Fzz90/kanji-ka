@@ -932,7 +932,7 @@ html:fullscreen {
   background: var(--white);
   border: 3px solid var(--ink);
   border-top-width: 7px;
-  padding: 14px 22px;
+  padding: 18px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -948,21 +948,6 @@ html:fullscreen {
   border-top-color: var(--moon);
 }
 
-.example-top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 6px;
-  flex-wrap: wrap;
-}
-
-.koma-tag {
-  font-size: 16px;
-  font-weight: 900;
-  padding: 3px 10px;
-  border-radius: 6px;
-}
-
 .tag-sun {
   background: var(--sun-soft);
   color: var(--sun-ink);
@@ -971,12 +956,6 @@ html:fullscreen {
 .tag-moon {
   background: var(--moon-soft);
   color: var(--moon);
-}
-
-.word-reading {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--muted);
 }
 
 .jp-sentence {
@@ -1029,8 +1008,8 @@ mark rt {
 
 .translation {
   font-size: 18px;
-  line-height: 1.38;
-  margin-top: 6px;
+  line-height: 1.4;
+  margin-top: 10px;
   color: var(--muted);
 }
 
