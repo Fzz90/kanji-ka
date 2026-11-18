@@ -362,16 +362,10 @@ html:fullscreen {
     animation-delay: calc(var(--i, 0) * 90ms + 80ms);
   }
 
-  .js .cover.active .cover-lead {
-    opacity: 0;
-    transform: translateY(14px);
-    animation: gentle-rise var(--t-reveal) var(--ease-out) 190ms forwards;
-  }
-
   .js .cover.active .presenter {
     opacity: 0;
     transform: translateY(14px);
-    animation: gentle-rise var(--t-reveal) var(--ease-out) 270ms forwards;
+    animation: gentle-rise var(--t-reveal) var(--ease-out) 190ms forwards;
   }
 
   .js .cover.active .celestial-cover-svg {
@@ -427,15 +421,8 @@ html:fullscreen {
   line-height: 1.02;
   letter-spacing: -4px;
   font-weight: 900;
-  margin: 0 0 18px;
+  margin: 0 0 24px;
   color: var(--sun-amber);
-}
-
-.cover-lead {
-  font-size: 22px;
-  line-height: 1.5;
-  color: var(--ink);
-  max-width: 36ch;
 }
 
 .presenter {
@@ -444,7 +431,7 @@ html:fullscreen {
   align-items: center;
   align-self: flex-start;
   gap: 8px 18px;
-  margin-top: 34px;
+  margin-top: 8px;
   padding: 13px 20px;
   background: var(--white);
   border: 3px solid var(--ink);
@@ -493,29 +480,9 @@ html:fullscreen {
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 16px;
   margin-top: 16px;
-}
-
-.art-caption {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.art-caption > [lang="ja"] {
-  font-size: 27px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: var(--gold);
-}
-
-.art-caption > span:last-child {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.4;
-  color: var(--moon-mist);
 }
 
 .start-button {
@@ -1344,12 +1311,8 @@ mark rt {
     margin: 0 0 14px;
   }
 
-  .cover-lead {
-    font-size: 16px;
-  }
-
   .presenter {
-    margin-top: 22px;
+    margin-top: 10px;
     font-size: 14px;
     gap: 6px 14px;
   }
@@ -1371,13 +1334,9 @@ mark rt {
   }
 
   .cover-right-footer {
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
-  }
-
-  .art-caption > [lang="ja"] {
-    font-size: 22px;
   }
 
   .cover .slide-bottom {
