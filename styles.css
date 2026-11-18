@@ -780,11 +780,12 @@ html:fullscreen {
   border: 3px solid var(--ink);
   background: var(--white);
   overflow: hidden;
-  margin-top: 4px;
+  height: 630px;
 }
 
 .jukugo-table {
   width: 100%;
+  height: 100%;
   border-collapse: collapse;
   table-layout: fixed;
   text-align: left;
@@ -802,17 +803,22 @@ html:fullscreen {
   width: 46%;
 }
 
+.jukugo-table thead tr {
+  height: 60px;
+}
+
 .jukugo-table thead th {
   background: var(--moon-deep);
   color: var(--gold);
   border-bottom: 3px solid var(--ink);
-  padding: 16px 26px;
-  font-size: 16px;
+  padding: 16px 28px;
+  font-size: 17px;
   font-weight: 800;
   letter-spacing: 0.2px;
 }
 
 .jukugo-table tbody tr {
+  height: 94px;
   background: var(--white);
   border-bottom: 2px solid var(--paper-deep);
 }
@@ -826,16 +832,16 @@ html:fullscreen {
 }
 
 .jukugo-table tbody td {
-  padding: 18px 26px;
+  padding: 16px 28px;
   vertical-align: middle;
 }
 
 .jukugo-pill {
   display: inline-block;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 900;
   line-height: 1.1;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 8px;
   border: 2px solid var(--ink);
 }
@@ -850,19 +856,19 @@ html:fullscreen {
 }
 
 .jukugo-kana {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 800;
   color: var(--ink);
 }
 
 .jukugo-romaji {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--muted);
 }
 
 .jukugo-meaning {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.35;
   color: var(--ink);
@@ -878,52 +884,12 @@ html:fullscreen {
   display: none !important;
 }
 
-.examples-intro {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.example-legend {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-}
-
-.example-legend > span {
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.dot-marker {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  border: 2px solid var(--ink);
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.dot-marker.sun {
-  background: var(--sun-gold);
-}
-
-.dot-marker.moon {
-  background: var(--moon);
-}
-
 .example-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, minmax(0, 1fr));
-  gap: 14px 18px;
-  height: 604px;
-  margin-top: 16px;
+  gap: 16px 18px;
+  height: 626px;
 }
 
 .example-card {
@@ -1458,6 +1424,15 @@ mark rt {
     grid-template-rows: none;
   }
 
+  .jukugo-table-card {
+    height: auto;
+  }
+
+  .jukugo-table thead tr,
+  .jukugo-table tbody tr {
+    height: auto;
+  }
+
   .jukugo-table thead th,
   .jukugo-table tbody td {
     padding: 14px 18px;
@@ -1475,12 +1450,6 @@ mark rt {
   .jukugo-romaji,
   .jukugo-meaning {
     font-size: 17px;
-  }
-
-  .examples-intro {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
   }
 
   .example-grid {
