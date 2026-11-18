@@ -20,7 +20,7 @@ Drawn direction: **`page-is-the-object`** (the presentation stage functions as a
 
 ## Slide Map (Mirrors Reference PDF 1..5)
 1. **Pembuka (`可`)**: Split cover pairing giant kanji **`可`**, presenter details (**Faiz Syihab · NIM 125241046 · Kelas A**), and custom dual-panel **Matahari & Bulan** sunrise/midnight SVG illustration with `Mulai materi`.
-2. **Cara Menulis & Info (`書き順 · 意味`)**: Left Solar panel hosts the live animated 5-stroke **KanjiVG** brush writer (`Putar/Jeda`, `Ulang`, stroke-by-stroke pen nib path animation + 5 clickable progressive thumbnails `1..5`). Right Lunar midnight panel lists `意味`, `訓読み`, `音読み`, `部首`, and `Strokes: 5`.
+2. **Cara Menulis & Info (`書き順 · 読み`)**: Left Solar panel hosts the live animated 5-stroke **KanjiVG** brush writer (`Putar/Jeda`, `Ulang`, stroke-by-stroke pen nib path animation centered in a large calligraphy box). Right Lunar midnight panel displays **Onyomi (`音読み`)**, **Kunyomi (`訓読み`)**, and **Bushu (`部首`)**.
 3. **Cara Mengingat (`覚え方`)**: Interactive visual component formula **`一 + 口 + 亅` (atau `丁 + 口`) = `可`** plus two contrasting story panels explaining visual origin & phonetic family (`河`, `歌`, `何`, `荷`), with live component-highlighting buttons inside an inline kanji inspector.
 4. **Kosakata & Contoh (`熟語と例文`)**: Six contextual jukugo & sentence frames (`可愛い`, `可能`, `許可`, `不可能`, `可能性`, `可決`) with toggleable `<ruby><rt>` furigana and Indonesian translations.
 5. **Penutup (`ありがとう`)**: Full-bleed midnight Lunar sky end-card with radiant Sun & Crescent Moon eclipse emblem, gold **`ありがとう。`** headline, signature, KanjiVG CC BY-SA 3.0 credit, and `Kembali ke awal` button.

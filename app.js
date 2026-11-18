@@ -18,14 +18,10 @@
 
   const strokePaths = [...document.querySelectorAll('#writer-active-strokes .stroke-path')];
   const strokeNumbers = [...document.querySelectorAll('#writer-stroke-nums .stroke-num')];
-  const strokeStepButtons = [...document.querySelectorAll('[data-stroke-step]')];
   const writerNib = document.querySelector('#writer-nib');
   const strokePlayBtn = document.querySelector('#stroke-play-btn');
   const strokePlayLabel = document.querySelector('#stroke-play-label');
   const strokeResetBtn = document.querySelector('#stroke-reset-btn');
-  const strokePhaseLabel = document.querySelector('#stroke-phase-label');
-  const strokeCueTitle = document.querySelector('#stroke-cue-title');
-  const strokeCueDesc = document.querySelector('#stroke-cue-desc');
 
   const partButtons = [...document.querySelectorAll('[data-part]')];
   const mnemonicStrokes = [...document.querySelectorAll('#mnemonic-kanji-svg [data-part-stroke]')];
@@ -36,29 +32,6 @@
   let currentSlide = 0;
   let transitionTimer;
   let toastTimer;
-
-  const STROKE_INFO = [
-    {
-      name: '横画（一）',
-      desc: 'Tarik garis datar panjang di bagian atas dari kiri ke kanan.'
-    },
-    {
-      name: '縦画（丨）',
-      desc: 'Tarik garis tegak sisi kiri kotak 口 dari atas ke bawah.'
-    },
-    {
-      name: '横折（𠃍）',
-      desc: 'Tarik bagian atas kotak 口 ke kanan lalu tekuk tajam ke bawah.'
-    },
-    {
-      name: '横画（一）',
-      desc: 'Tutup bagian bawah kotak 口 dengan garis datar ke kanan.'
-    },
-    {
-      name: '縦鉤（亅）',
-      desc: 'Tarik garis tegak panjang di kanan, lalu buat kail pendek ke kiri.'
-    }
-  ];
 
   const MNEMONIC_DATA = {
     all: {
@@ -116,19 +89,6 @@
     });
   }
 
-  function updateStrokeCue(stepOneBased) {
-    const info = STROKE_INFO[stepOneBased - 1];
-    if (!info) return;
-    if (strokePhaseLabel) strokePhaseLabel.textContent = `Guratan ${stepOneBased} dari ${strokePaths.length}`;
-    if (strokeCueTitle) strokeCueTitle.textContent = info.name;
-    if (strokeCueDesc) strokeCueDesc.textContent = info.desc;
-    strokeStepButtons.forEach((btn, idx) => {
-      const isCurrent = idx + 1 === stepOneBased;
-      btn.classList.toggle('is-active', isCurrent);
-      btn.setAttribute('aria-pressed', String(isCurrent));
-    });
-  }
-
   function renderStrokeFrame(strokeIdx, drawRatio, showNib = true) {
     if (!strokeLengths.length) initStrokeMetrics();
     strokePaths.forEach((path, idx) => {
@@ -150,8 +110,6 @@
     strokeNumbers.forEach((num, idx) => {
       num.classList.toggle('is-active', idx === strokeIdx);
     });
-
-    updateStrokeCue(strokeIdx + 1);
 
     if (writerNib && strokePaths[strokeIdx]) {
       const len = strokeLengths[strokeIdx];
@@ -240,24 +198,6 @@
     phaseStartMs = 0;
     updatePlayButtonUI();
     writerRafId = requestAnimationFrame(tickWriter);
-  }
-
-  function pauseWriterAtStep(stepOneBased) {
-    stopWriterLoop();
-    isWriterPlaying = false;
-    updatePlayButtonUI();
-    activeStrokeIdx = Math.max(0, Math.min(strokePaths.length - 1, stepOneBased - 1));
-    writerPhase = 'draw';
-    renderStrokeFrame(activeStrokeIdx, 1, false);
-    if (strokePaths[activeStrokeIdx] && strokeLengths.length) {
-      const len = strokeLengths[activeStrokeIdx];
-      const pt = strokePaths[activeStrokeIdx].getPointAtLength(len);
-      if (writerNib) {
-        writerNib.setAttribute('cx', pt.x.toFixed(2));
-        writerNib.setAttribute('cy', pt.y.toFixed(2));
-        writerNib.style.opacity = '1';
-      }
-    }
   }
 
   function selectMnemonicPart(partKey) {
@@ -462,20 +402,14 @@
   if (strokeResetBtn) {
     strokeResetBtn.addEventListener('click', () => {
       if (reducedMotion.matches) {
-        pauseWriterAtStep(1);
+        activeStrokeIdx = 0;
+        writerPhase = 'draw';
+        renderStrokeFrame(strokePaths.length - 1, 1, false);
       } else {
         startWriterPlayback({ fromStart: true });
       }
     });
   }
-
-  strokeStepButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const step = Number(btn.dataset.strokeStep);
-      pauseWriterAtStep(step);
-      announcer.textContent = `Guratan ${step} dari ${strokePaths.length}. ${STROKE_INFO[step - 1].desc}`;
-    });
-  });
 
   partButtons.forEach(btn => {
     btn.addEventListener('click', () => selectMnemonicPart(btn.dataset.part));

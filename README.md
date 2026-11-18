@@ -16,8 +16,8 @@ Lalu buka `http://127.0.0.1:4174`.
 
 1. **Pembuka (`可`):** Kanji utama `可`, identitas presenter, serta ilustrasi panel kembar Matahari & Bulan.
 2. **Cara Menulis & Profil:**
-   - Panel kiri: Animasi urutan 5 guratan `可` secara berurutan dengan kuas penunjuk arah, tombol `Putar / Jeda` dan `Ulang`, serta 5 kartu langkah progresif (`1` sampai `5`) yang bisa diklik.
-   - Panel kanan: Arti (`意味`), Kunyomi (`訓読み`), Onyomi (`音読み`), Radikal (`部首`), dan jumlah guratan (`Strokes: 5`).
+   - Panel kiri: Animasi urutan 5 guratan `可` secara berurutan dengan kuas penunjuk arah serta tombol `Putar / Jeda` dan `Ulang`.
+   - Panel kanan: Onyomi (`音読み`), Kunyomi (`訓読み`), dan Bushu (`部首`).
 3. **Cara Mengingat (`覚え方`):** Penguraian komponen `一 + 口 + 亅` (`丁 + 口`) menjadi `可` lengkap dengan sorotan guratan interaktif.
 4. **Kosakata & Contoh (`熟語と例文`):** Enam kata dan kalimat contoh kontekstual (`可愛い`, `可能`, `許可`, `不可能`, `可能性`, `可決`) lengkap dengan furigana (dapat ditampilkan/disembunyikan) dan terjemahan Indonesia.
 5. **Penutup (`ありがとう`):** Kartu penutup bertema gerhana Bulan & Matahari beserta tombol kembali ke awal.

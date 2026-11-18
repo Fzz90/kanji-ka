@@ -674,17 +674,17 @@ html:fullscreen {
 }
 
 .writer-stage-row {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 22px;
+  display: flex;
   align-items: center;
-  margin-top: 4px;
+  justify-content: center;
   flex: 1 1 auto;
+  min-height: 0;
 }
 
 .writer-canvas-wrap {
-  width: 260px;
-  height: 260px;
+  width: min(410px, 100%);
+  aspect-ratio: 1;
+  max-height: 440px;
 }
 
 .writer-svg {
@@ -719,98 +719,6 @@ html:fullscreen {
   font-size: 10.5px;
 }
 
-.stroke-cue-panel {
-  background: var(--paper);
-  border: 2px solid var(--ink);
-  border-radius: 10px;
-  padding: 20px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-height: 186px;
-  justify-content: center;
-}
-
-.stroke-phase-label {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--sun-amber);
-}
-
-.stroke-cue-title {
-  font-size: 28px;
-  line-height: 1.25;
-  font-weight: 900;
-  color: var(--ink);
-}
-
-.stroke-cue-desc {
-  font-size: 18px;
-  line-height: 1.45;
-  color: var(--muted);
-}
-
-.stroke-steps-row {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.step-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  min-height: 44px;
-  padding: 10px 6px 8px;
-  border: 2px solid var(--ink);
-  border-radius: 9px;
-  background: var(--paper);
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.step-card svg {
-  width: 56px;
-  height: 56px;
-  fill: none;
-  stroke-width: 7.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.step-card .st-ghost {
-  stroke: #c2cbe0;
-}
-
-.step-card .st-done {
-  stroke: var(--ink);
-}
-
-.step-card .st-curr {
-  stroke: var(--sun-stroke);
-}
-
-.step-card.is-active {
-  background: var(--moon-deep);
-  color: var(--gold);
-  border-color: var(--ink);
-}
-
-.step-card.is-active .st-ghost {
-  stroke: #244880;
-}
-
-.step-card.is-active .st-done {
-  stroke: var(--white);
-}
-
-.step-card.is-active .st-curr {
-  stroke: var(--gold);
-}
-
 .moon-kanji-mini {
   font-size: 28px;
   font-weight: 900;
@@ -821,52 +729,45 @@ html:fullscreen {
 .kanji-specs {
   flex: 1 1 auto;
   display: grid;
-  grid-template-rows: repeat(5, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .spec-row {
   background: var(--moon);
   border: 2px solid var(--gold);
   border-radius: 10px;
-  padding: 10px 18px;
+  padding: 18px 22px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2px;
+  gap: 6px;
 }
 
 .spec-row dt {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--gold);
 }
 
 .spec-row dd {
-  font-size: 20px;
-  line-height: 1.35;
+  font-size: 22px;
+  line-height: 1.4;
   color: var(--white);
 }
 
 .jp-val {
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 900;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .highlight-gold {
   color: var(--gold);
 }
 
-.num-val {
-  font-size: 26px;
-  font-weight: 900;
-  color: var(--gold);
-  margin-right: 6px;
-}
-
 .spec-note {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--moon-mist);
 }
 
@@ -1461,8 +1362,7 @@ mark rt {
   .pill-toggle:hover,
   .icon-button:hover:not(:disabled),
   .writer-btn:not(.writer-btn-primary):hover,
-  .part-chip:not(.is-selected):hover,
-  .step-card:not(.is-active):hover {
+  .part-chip:not(.is-selected):hover {
     background: var(--paper-deep);
   }
 
@@ -1676,21 +1576,13 @@ mark rt {
   }
 
   .writer-stage-row {
-    grid-template-columns: 200px 1fr;
+    padding: 8px 0;
   }
 
   .writer-canvas-wrap {
-    width: 200px;
-    height: 200px;
-  }
-
-  .stroke-cue-panel {
-    min-height: 0;
-    padding: 16px;
-  }
-
-  .stroke-cue-desc {
-    font-size: 16px;
+    width: min(320px, 100%);
+    height: auto;
+    aspect-ratio: 1;
   }
 
   .kanji-specs {
@@ -1881,24 +1773,23 @@ mark rt {
     flex-wrap: wrap;
   }
 
-  .writer-stage-row {
-    grid-template-columns: 1fr;
-  }
-
   .writer-canvas-wrap {
-    width: 210px;
-    height: 210px;
+    width: min(250px, 100%);
+    height: auto;
+    aspect-ratio: 1;
     margin: 0 auto;
   }
 
-  .stroke-steps-row {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 6px;
+  .spec-row {
+    padding: 14px 16px;
   }
 
-  .step-card svg {
-    width: 40px;
-    height: 40px;
+  .jp-val {
+    font-size: 24px;
+  }
+
+  .spec-note {
+    font-size: 15px;
   }
 
   .mnemonic-equation-bar {

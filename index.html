@@ -8,8 +8,8 @@
   <title>Kanji 可 · Tema Bulan &amp; Matahari</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js');</script>
-  <link rel="stylesheet" href="styles.css?v=20261119-4">
-  <script src="app.js?v=20261119-4" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261119-5">
+  <script src="app.js?v=20261119-5" defer></script>
 </head>
 <body>
   <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -178,11 +178,11 @@
         <section class="slide profile-slide" id="slide-2" aria-labelledby="profile-title" tabindex="-1" data-title="Cara Menulis" hidden inert>
           <div class="section-heading">
             <h2 class="section-title" id="profile-title">Cara menulis &amp; profil kanji</h2>
-            <span class="heading-jp" lang="ja" aria-hidden="true">書き順 · 意味</span>
+            <span class="heading-jp" lang="ja" aria-hidden="true">書き順 · 読み</span>
           </div>
 
           <div class="profile-layout">
-            <!-- Left Solar Panel: Animated Stroke-Order Writer (Mirrors PDF Slide 2 Left) -->
+            <!-- Left Solar Panel: Pure Animated Stroke-Order Writer -->
             <article class="writer-panel">
               <div class="panel-top-row">
                 <span class="role-badge badge-sun">
@@ -204,7 +204,7 @@
               <div class="writer-stage-row">
                 <div class="writer-canvas-wrap" data-ui>
                   <svg id="kanji-writer" class="writer-svg" viewBox="0 0 109 109" role="img" aria-label="Animasi urutan 5 guratan kanji 可">
-                    <rect x="2" y="2" width="105" height="105" rx="6" fill="#FFFFFF" stroke="#121622" stroke-width="2.5"/>
+                    <rect x="2" y="2" width="105" height="105" rx="6" fill="#FFFFFF" stroke="#111625" stroke-width="2.5"/>
                     <line x1="54.5" y1="4" x2="54.5" y2="105" stroke="#DCE3F0" stroke-width="1.5" stroke-dasharray="4 4"/>
                     <line x1="4" y1="54.5" x2="105" y2="54.5" stroke="#DCE3F0" stroke-width="1.5" stroke-dasharray="4 4"/>
                     <rect x="16" y="16" width="77" height="77" fill="none" stroke="#E8ECF5" stroke-width="1.2"/>
@@ -219,7 +219,7 @@
                     </g>
 
                     <!-- Active animated KanjiVG strokes -->
-                    <g id="writer-active-strokes" fill="none" stroke="#121622" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                    <g id="writer-active-strokes" fill="none" stroke="#111625" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
                       <path class="stroke-path" data-stroke="1" d="M13.88,21.98C18,22.75,21.74,22.34,25.39,22c13.57-1.26,43.04-4.34,58.11-5.52c3.93-0.31,7.74-0.5,11.63,0.33"/>
                       <path class="stroke-path" data-stroke="2" d="M25,42.14c0.87,0.87,1.5,1.99,1.79,3.21c0.74,3.14,1.96,9.62,2.94,15.63c0.28,1.74,0.55,3.45,0.77,5.02"/>
                       <path class="stroke-path" data-stroke="3" d="M27.38,44.28c7.5-1.77,16.49-3.18,21.87-4.27c3.75-0.76,5.13,1.05,4.31,4.53c-1.01,4.33-1.94,8.21-3.4,14.01"/>
@@ -228,7 +228,7 @@
                     </g>
 
                     <!-- Stroke Numbers -->
-                    <g id="writer-stroke-nums" font-size="8.5" font-weight="800" font-family="sans-serif" fill="#464C5E">
+                    <g id="writer-stroke-nums" font-size="8.5" font-weight="800" font-family="sans-serif" fill="#464D61">
                       <text class="stroke-num" data-stroke="1" x="6.5" y="19">1</text>
                       <text class="stroke-num" data-stroke="2" x="17.5" y="53">2</text>
                       <text class="stroke-num" data-stroke="3" x="28" y="38.5">3</text>
@@ -240,70 +240,10 @@
                     <circle id="writer-nib" cx="13.88" cy="21.98" r="4.6" fill="#F7CA18" stroke="#111625" stroke-width="1.6"/>
                   </svg>
                 </div>
-
-                <div class="stroke-cue-panel">
-                  <div class="stroke-phase-label" id="stroke-phase-label">Guratan 1 dari 5</div>
-                  <p class="stroke-cue-title" id="stroke-cue-title" lang="ja">横画（一）</p>
-                  <p class="stroke-cue-desc" id="stroke-cue-desc">Tarik garis datar panjang di bagian atas dari kiri ke kanan.</p>
-                </div>
-              </div>
-
-              <!-- Progressive 5 Frames (Mirrors PDF Slide 2 First..Fifth) -->
-              <div class="stroke-steps-row" role="group" aria-label="Pilih langkah guratan ke-1 sampai ke-5" data-ui>
-                <button type="button" class="step-card is-active" data-stroke-step="1" aria-label="Tampilkan guratan 1">
-                  <svg viewBox="0 0 109 109" aria-hidden="true">
-                    <path class="st-curr" d="M13.88,21.98C18,22.75,21.74,22.34,25.39,22c13.57-1.26,43.04-4.34,58.11-5.52c3.93-0.31,7.74-0.5,11.63,0.33"/>
-                    <path class="st-ghost" d="M25,42.14c0.87,0.87,1.5,1.99,1.79,3.21c0.74,3.14,1.96,9.62,2.94,15.63c0.28,1.74,0.55,3.45,0.77,5.02"/>
-                    <path class="st-ghost" d="M27.38,44.28c7.5-1.77,16.49-3.18,21.87-4.27c3.75-0.76,5.13,1.05,4.31,4.53c-1.01,4.33-1.94,8.21-3.4,14.01"/>
-                    <path class="st-ghost" d="M31.2,61.83c5.62-0.7,11.39-1.52,17.83-2.29c1.21-0.14,2.43-0.29,3.69-0.43"/>
-                    <path class="st-ghost" d="M75.46,20.33c1.04,1.04,2.01,2.67,2.01,4.77c0,14.56-0.01,60.44-0.01,65.4c0,10.62-7.96,1.25-9.46,0"/>
-                  </svg>
-                  <span>Ke-1</span>
-                </button>
-                <button type="button" class="step-card" data-stroke-step="2" aria-label="Tampilkan guratan 2">
-                  <svg viewBox="0 0 109 109" aria-hidden="true">
-                    <path class="st-done" d="M13.88,21.98C18,22.75,21.74,22.34,25.39,22c13.57-1.26,43.04-4.34,58.11-5.52c3.93-0.31,7.74-0.5,11.63,0.33"/>
-                    <path class="st-curr" d="M25,42.14c0.87,0.87,1.5,1.99,1.79,3.21c0.74,3.14,1.96,9.62,2.94,15.63c0.28,1.74,0.55,3.45,0.77,5.02"/>
-                    <path class="st-ghost" d="M27.38,44.28c7.5-1.77,16.49-3.18,21.87-4.27c3.75-0.76,5.13,1.05,4.31,4.53c-1.01,4.33-1.94,8.21-3.4,14.01"/>
-                    <path class="st-ghost" d="M31.2,61.83c5.62-0.7,11.39-1.52,17.83-2.29c1.21-0.14,2.43-0.29,3.69-0.43"/>
-                    <path class="st-ghost" d="M75.46,20.33c1.04,1.04,2.01,2.67,2.01,4.77c0,14.56-0.01,60.44-0.01,65.4c0,10.62-7.96,1.25-9.46,0"/>
-                  </svg>
-                  <span>Ke-2</span>
-                </button>
-                <button type="button" class="step-card" data-stroke-step="3" aria-label="Tampilkan guratan 3">
-                  <svg viewBox="0 0 109 109" aria-hidden="true">
-                    <path class="st-done" d="M13.88,21.98C18,22.75,21.74,22.34,25.39,22c13.57-1.26,43.04-4.34,58.11-5.52c3.93-0.31,7.74-0.5,11.63,0.33"/>
-                    <path class="st-done" d="M25,42.14c0.87,0.87,1.5,1.99,1.79,3.21c0.74,3.14,1.96,9.62,2.94,15.63c0.28,1.74,0.55,3.45,0.77,5.02"/>
-                    <path class="st-curr" d="M27.38,44.28c7.5-1.77,16.49-3.18,21.87-4.27c3.75-0.76,5.13,1.05,4.31,4.53c-1.01,4.33-1.94,8.21-3.4,14.01"/>
-                    <path class="st-ghost" d="M31.2,61.83c5.62-0.7,11.39-1.52,17.83-2.29c1.21-0.14,2.43-0.29,3.69-0.43"/>
-                    <path class="st-ghost" d="M75.46,20.33c1.04,1.04,2.01,2.67,2.01,4.77c0,14.56-0.01,60.44-0.01,65.4c0,10.62-7.96,1.25-9.46,0"/>
-                  </svg>
-                  <span>Ke-3</span>
-                </button>
-                <button type="button" class="step-card" data-stroke-step="4" aria-label="Tampilkan guratan 4">
-                  <svg viewBox="0 0 109 109" aria-hidden="true">
-                    <path class="st-done" d="M13.88,21.98C18,22.75,21.74,22.34,25.39,22c13.57-1.26,43.04-4.34,58.11-5.52c3.93-0.31,7.74-0.5,11.63,0.33"/>
-                    <path class="st-done" d="M25,42.14c0.87,0.87,1.5,1.99,1.79,3.21c0.74,3.14,1.96,9.62,2.94,15.63c0.28,1.74,0.55,3.45,0.77,5.02"/>
-                    <path class="st-done" d="M27.38,44.28c7.5-1.77,16.49-3.18,21.87-4.27c3.75-0.76,5.13,1.05,4.31,4.53c-1.01,4.33-1.94,8.21-3.4,14.01"/>
-                    <path class="st-curr" d="M31.2,61.83c5.62-0.7,11.39-1.52,17.83-2.29c1.21-0.14,2.43-0.29,3.69-0.43"/>
-                    <path class="st-ghost" d="M75.46,20.33c1.04,1.04,2.01,2.67,2.01,4.77c0,14.56-0.01,60.44-0.01,65.4c0,10.62-7.96,1.25-9.46,0"/>
-                  </svg>
-                  <span>Ke-4</span>
-                </button>
-                <button type="button" class="step-card" data-stroke-step="5" aria-label="Tampilkan guratan 5">
-                  <svg viewBox="0 0 109 109" aria-hidden="true">
-                    <path class="st-done" d="M13.88,21.98C18,22.75,21.74,22.34,25.39,22c13.57-1.26,43.04-4.34,58.11-5.52c3.93-0.31,7.74-0.5,11.63,0.33"/>
-                    <path class="st-done" d="M25,42.14c0.87,0.87,1.5,1.99,1.79,3.21c0.74,3.14,1.96,9.62,2.94,15.63c0.28,1.74,0.55,3.45,0.77,5.02"/>
-                    <path class="st-done" d="M27.38,44.28c7.5-1.77,16.49-3.18,21.87-4.27c3.75-0.76,5.13,1.05,4.31,4.53c-1.01,4.33-1.94,8.21-3.4,14.01"/>
-                    <path class="st-done" d="M31.2,61.83c5.62-0.7,11.39-1.52,17.83-2.29c1.21-0.14,2.43-0.29,3.69-0.43"/>
-                    <path class="st-curr" d="M75.46,20.33c1.04,1.04,2.01,2.67,2.01,4.77c0,14.56-0.01,60.44-0.01,65.4c0,10.62-7.96,1.25-9.46,0"/>
-                  </svg>
-                  <span>Ke-5</span>
-                </button>
               </div>
             </article>
 
-            <!-- Right Lunar Panel: Meaning, Kunyomi, Onyomi, Radical, Strokes (Mirrors PDF Slide 2 Right) -->
+            <!-- Right Lunar Panel: Onyomi, Kunyomi, and Bushu Only -->
             <article class="kanji-meta-panel">
               <div class="panel-top-row">
                 <span class="role-badge badge-moon">
@@ -315,24 +255,16 @@
 
               <dl class="kanji-specs">
                 <div class="spec-row">
-                  <dt><span lang="ja">意味</span> · Arti</dt>
-                  <dd><strong>Dapat, boleh, memungkinkan, disetujui</strong> <span class="spec-note">(can, passable, approval)</span></dd>
+                  <dt><span lang="ja">音読み</span> · Onyomi</dt>
+                  <dd><span lang="ja" class="jp-val highlight-gold">カ</span> <span class="spec-note">(utama) · コク (jarang)</span></dd>
                 </div>
                 <div class="spec-row">
                   <dt><span lang="ja">訓読み</span> · Kunyomi</dt>
                   <dd><span lang="ja" class="jp-val">べ.き · べ.し</span> <span class="spec-note">(ragam klasik, non-joyo)</span></dd>
                 </div>
                 <div class="spec-row">
-                  <dt><span lang="ja">音読み</span> · Onyomi</dt>
-                  <dd><span lang="ja" class="jp-val highlight-gold">カ</span> <span class="spec-note">(utama) · コク (jarang)</span></dd>
-                </div>
-                <div class="spec-row">
-                  <dt><span lang="ja">部首</span> · Radikal</dt>
+                  <dt><span lang="ja">部首</span> · Bushu</dt>
                   <dd><span lang="ja" class="jp-val highlight-gold">口</span> <span class="spec-note">(kuchi · mulut)</span></dd>
-                </div>
-                <div class="spec-row">
-                  <dt>Strokes · Guratan</dt>
-                  <dd><strong class="num-val">5</strong> <span class="spec-note">guratan · Kanji Kelas 5 SD</span></dd>
                 </div>
               </dl>
             </article>
