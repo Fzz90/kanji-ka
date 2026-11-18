@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap');
 
 :root {
-  --ink: #121622;
-  --muted: #464c5e;
-  --paper: #f3f5fa;
+  --ink: #111625;
+  --muted: #464d61;
+  --paper: #f3f6fb;
   --paper-soft: #e8ecf5;
   --paper-deep: #dce3f0;
   --white: #ffffff;
-  --sun: #c41e2a;
-  --sun-strong: #9e1520;
-  --sun-deep: #8f121c;
-  --sun-soft: #fde4e6;
-  --gold: #fae46b;
-  --gold-ink: #524100;
+  --sun-gold: #f7ca18;
+  --sun-gold-hover: #e5b600;
+  --sun-amber: #9a5f00;
+  --sun-stroke: #b87400;
+  --sun-ink: #6e4a00;
+  --sun-soft: #fff5c4;
+  --gold: #f7ca18;
+  --gold-ink: #111625;
   --moon: #123a7a;
   --moon-deep: #0c254d;
   --moon-soft: #dfeafc;
@@ -70,7 +72,7 @@ button svg {
 button:focus-visible,
 a:focus-visible,
 section:focus-visible {
-  outline: 3px solid var(--sun);
+  outline: 3px solid var(--moon);
   outline-offset: 4px;
 }
 
@@ -78,7 +80,7 @@ section:focus-visible {
 .kanji-meta-panel button:focus-visible,
 .cover-right button:focus-visible,
 .lunar-story-card button:focus-visible {
-  outline-color: var(--gold);
+  outline-color: var(--sun-gold);
 }
 
 button:disabled:hover svg {
@@ -427,7 +429,7 @@ html:fullscreen {
   letter-spacing: -4px;
   font-weight: 900;
   margin: 0 0 18px;
-  color: var(--sun);
+  color: var(--sun-amber);
 }
 
 .cover-lead {
@@ -600,8 +602,8 @@ html:fullscreen {
 
 .badge-sun {
   background: var(--sun-soft);
-  color: var(--sun-deep);
-  border: 2px solid var(--sun);
+  color: var(--sun-ink);
+  border: 2px solid var(--sun-stroke);
 }
 
 .badge-moon {
@@ -667,8 +669,8 @@ html:fullscreen {
 }
 
 .writer-btn-primary {
-  background: var(--sun);
-  color: var(--white);
+  background: var(--sun-gold);
+  color: var(--ink);
 }
 
 .writer-stage-row {
@@ -704,7 +706,7 @@ html:fullscreen {
 }
 
 .stroke-path.is-active {
-  stroke: var(--sun);
+  stroke: var(--sun-stroke);
   opacity: 1;
 }
 
@@ -713,7 +715,7 @@ html:fullscreen {
 }
 
 .stroke-num.is-active {
-  fill: var(--sun);
+  fill: var(--sun-amber);
   font-size: 10.5px;
 }
 
@@ -732,7 +734,7 @@ html:fullscreen {
 .stroke-phase-label {
   font-size: 14px;
   font-weight: 800;
-  color: var(--sun);
+  color: var(--sun-amber);
 }
 
 .stroke-cue-title {
@@ -788,7 +790,7 @@ html:fullscreen {
 }
 
 .step-card .st-curr {
-  stroke: var(--sun);
+  stroke: var(--sun-stroke);
 }
 
 .step-card.is-active {
@@ -895,7 +897,7 @@ html:fullscreen {
 .eq-op {
   font-size: 28px;
   font-weight: 900;
-  color: var(--sun);
+  color: var(--sun-amber);
   flex-shrink: 0;
 }
 
@@ -933,12 +935,12 @@ html:fullscreen {
 
 .part-chip-tei {
   background: var(--sun-soft);
-  color: var(--sun-deep);
+  color: var(--sun-ink);
 }
 
 .part-chip-tei.is-selected {
-  background: var(--sun);
-  color: var(--white);
+  background: var(--sun-gold);
+  color: var(--ink);
 }
 
 .mnemonic-columns {
@@ -989,7 +991,7 @@ html:fullscreen {
 }
 
 .m-stroke.is-lit {
-  stroke: var(--sun);
+  stroke: var(--sun-stroke);
 }
 
 .mnemonic-copy h3,
@@ -1016,8 +1018,8 @@ html:fullscreen {
   padding: 14px 18px;
   border-radius: 10px;
   background: var(--sun-soft);
-  border: 2px solid var(--sun);
-  color: var(--sun-deep);
+  border: 2px solid var(--sun-stroke);
+  color: var(--sun-ink);
   font-size: 16px;
   font-weight: 700;
 }
@@ -1115,7 +1117,7 @@ html:fullscreen {
 }
 
 .dot-marker.sun {
-  background: var(--sun);
+  background: var(--sun-gold);
 }
 
 .dot-marker.moon {
@@ -1146,7 +1148,7 @@ html:fullscreen {
 }
 
 .card-sun {
-  border-top-color: var(--sun);
+  border-top-color: var(--sun-gold);
 }
 
 .card-moon {
@@ -1170,7 +1172,7 @@ html:fullscreen {
 
 .tag-sun {
   background: var(--sun-soft);
-  color: var(--sun-deep);
+  color: var(--sun-ink);
 }
 
 .tag-moon {
@@ -1208,7 +1210,7 @@ body.furigana-hidden rt {
 }
 
 mark {
-  color: var(--sun-deep);
+  color: var(--sun-ink);
   background: var(--sun-soft);
   border-radius: 5px;
   padding: 1px 6px;
@@ -1218,7 +1220,7 @@ mark {
 }
 
 mark rt {
-  color: var(--sun-deep);
+  color: var(--sun-ink);
   font-weight: 700;
 }
 
@@ -1283,7 +1285,7 @@ mark rt {
 }
 
 .closing h2 > span {
-  color: var(--sun);
+  color: var(--moon-soft);
 }
 
 .closing-copy > p {
@@ -1450,8 +1452,8 @@ mark rt {
 }
 
 .arrow-controls .next {
-  background: var(--sun);
-  color: var(--white);
+  background: var(--sun-gold);
+  color: var(--ink);
 }
 
 /* HOVER ENHANCEMENTS ONLY ON FINE POINTERS */
@@ -1469,13 +1471,11 @@ mark rt {
   }
 
   .arrow-controls .next:hover:not(:disabled),
-  .writer-btn-primary:hover {
-    background: var(--sun-strong);
-  }
-
+  .writer-btn-primary:hover,
   .start-button:hover,
-  .restart-button:hover {
-    background: #eed34d;
+  .restart-button:hover,
+  .part-chip-tei.is-selected:hover {
+    background: var(--sun-gold-hover);
   }
 
   .start-button:hover svg,

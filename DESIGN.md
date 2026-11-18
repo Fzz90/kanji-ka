@@ -7,16 +7,15 @@ Five interactive presentation slides in Indonesian for **Faiz Syihab, NIM 125241
 Reading this as: **interactive kanji study & stroke-animation presentation deck** for **university learners**, in a **Sun & Moon Japanese editorial almanac (*Nichigetsu*) visual language** following `bunpou-nodeshita`'s crisp ink-framed panel discipline, dial **ENERGY 3 / RHYTHM 3 / MOTION 2**.
 
 ## Direction Note (`cx-design-taste-frontend`)
-Drawn direction: **`page-is-the-object`** (the presentation stage functions as an interactive Japanese celestial kanji sheet & stroke manuscript). Type (`Bricolage Grotesque` + `Zen Kaku Gothic New`) and flat palette were redrawn from the default draw sheet to honor the required `bunpou-nodeshita` theme lineage and the Moon & Sun brief while strictly avoiding gradients, blurred glass blobs, cream+terracotta, and violet/indigo hues.
+Drawn direction: **`page-is-the-object`** (the presentation stage functions as an interactive Japanese celestial kanji sheet & stroke manuscript). Type (`Bricolage Grotesque` + `Zen Kaku Gothic New`) and flat palette were redrawn from the default draw sheet to honor the required `bunpou-nodeshita` theme lineage and the Moon & Sun brief while strictly avoiding gradients, blurred glass blobs, cream+terracotta, red hues, and violet/indigo hues.
 
 ## Visual System (Moon & Sun)
-- **Midnight Ink (`--ink`)**: `#121622` (crisp `3px` frames & primary dark text; `16.55:1` on paper, `18.05:1` on white)
-- **Slate Muted (`--muted`)**: `#464C5E` (`7.84:1` on paper, `8.55:1` on white)
-- **Starlight Paper (`--paper`)**: `#F3F5FA` (clean neutral daylight ground; `#E8ECF5` soft, `#DCE3F0` deep)
+- **Midnight Ink (`--ink`)**: `#111625` (crisp `3px` frames & primary dark text; `16.64:1` on paper)
+- **Slate Muted (`--muted`)**: `#464D61` (`7.77:1` on paper)
+- **Starlight Paper (`--paper`)**: `#F3F6FB` (clean neutral daylight ground; `#E8ECF5` soft, `#DCE3F0` deep)
 - **White (`--white`)**: `#FFFFFF` (daylight reading cards)
-- **Solar Hinomaru Crimson (`--sun`)**: `#C41E2A` (Matahari primary accent, stroke highlight, primary CTA; `5.89:1` with white, `5.40:1` on paper)
-- **Solar Gold / Moonbeam (`--gold`)**: `#FAE46B` (Sun halo & crescent moon accent, paired with `#524100` bronze ink `7.74:1`, `#121622` ink, or `#0C254D` `11.80:1`)
-- **Lunar Prussian Blue (`--moon` / `--moon-deep`)**: `#123A7A` / `#0C254D` (Bulan night sky fields & contrasting panels; `15.14:1` white on `--moon-deep`)
+- **Solar Gold / Amber (`--sun-gold` / `--sun-amber` / `--sun-stroke` / `--sun-ink`)**: `#F7CA18` primary fill (`11.51:1` with `--ink`, `9.67:1` on `--moon-deep`), `#E5B600` hover (`9.46:1` with `--ink`), `#9A5F00` daylight text/kanji display (`4.83:1` on paper), `#B87400` active stroke highlight (`3.79:1` on white), `#6E4A00` mark/badge ink on `#FFF5C4` `--sun-soft` (`7.23:1` on `--sun-soft`, `7.95:1` on white)
+- **Lunar Prussian Blue (`--moon` / `--moon-deep`)**: `#123A7A` / `#0C254D` (Bulan night sky fields & contrasting panels; `10.98:1` white on `--moon`, `9.67:1` `--sun-gold` on `--moon-deep`)
 - **Type**: `Bricolage Grotesque` (`500;700;800` for Latin headings & Indonesian UI) + `Zen Kaku Gothic New` (`500;700;900` for Japanese kanji, readings, & furigana).
 
 ## Slide Map (Mirrors Reference PDF 1..5)
