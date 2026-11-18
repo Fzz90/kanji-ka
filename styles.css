@@ -78,8 +78,7 @@ section:focus-visible {
 
 .closing button:focus-visible,
 .kanji-meta-panel button:focus-visible,
-.cover-right button:focus-visible,
-.lunar-story-card button:focus-visible {
+.cover-right button:focus-visible {
   outline-color: var(--sun-gold);
 }
 
@@ -771,209 +770,102 @@ html:fullscreen {
   color: var(--moon-mist);
 }
 
-/* SLIDE 3: CARA MENGINGAT (覚 え 方) */
-.mnemonic {
-  padding-top: 40px;
+/* SLIDE 3: DAFTAR JUKUGO REIBUN (熟語一覧) */
+.jukugo-slide {
+  padding-top: 38px;
 }
 
-.mnemonic-equation-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 18px;
-  background: var(--white);
-  border: 3px solid var(--ink);
+.jukugo-table-card {
   border-radius: 12px;
-  margin-bottom: 20px;
+  border: 3px solid var(--ink);
+  background: var(--white);
+  overflow: hidden;
+  margin-top: 4px;
 }
 
-.eq-label {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--muted);
-  white-space: nowrap;
+.jukugo-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: left;
 }
 
-.eq-op {
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--sun-amber);
-  flex-shrink: 0;
+.col-jukugo {
+  width: 24%;
 }
 
-.part-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 54px;
-  padding: 6px 14px;
-  border: 2px solid var(--ink);
-  border-radius: 10px;
+.col-reading {
+  width: 30%;
+}
+
+.col-meaning {
+  width: 46%;
+}
+
+.jukugo-table thead th {
+  background: var(--moon-deep);
+  color: var(--gold);
+  border-bottom: 3px solid var(--ink);
+  padding: 16px 26px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.jukugo-table tbody tr {
+  background: var(--white);
+  border-bottom: 2px solid var(--paper-deep);
+}
+
+.jukugo-table tbody tr:nth-child(even) {
   background: var(--paper);
-  color: var(--ink);
-  font-weight: 800;
-  flex: 1 1 0;
-  justify-content: center;
 }
 
-.part-glyph {
-  font-size: 26px;
+.jukugo-table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.jukugo-table tbody td {
+  padding: 18px 26px;
+  vertical-align: middle;
+}
+
+.jukugo-pill {
+  display: inline-block;
+  font-size: 24px;
   font-weight: 900;
-  line-height: 1;
-  white-space: nowrap;
+  line-height: 1.1;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 2px solid var(--ink);
 }
 
-.part-name {
-  font-size: 15px;
-  font-weight: 700;
+.jukugo-pill.tag-moon {
+  color: var(--moon-deep);
+  border-color: var(--moon);
 }
 
-.part-chip.is-selected {
-  background: var(--moon-deep);
-  color: var(--gold);
+.jukugo-pill.tag-sun {
+  border-color: var(--sun-stroke);
 }
 
-.part-chip-tei {
-  background: var(--sun-soft);
-  color: var(--sun-ink);
-}
-
-.part-chip-tei.is-selected {
-  background: var(--sun-gold);
-  color: var(--ink);
-}
-
-.mnemonic-columns {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 24px;
-  height: 512px;
-}
-
-.mnemonic-card {
-  border-radius: 12px;
-  border: 3px solid var(--ink);
-  padding: 28px 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-.solar-story-card {
-  background: var(--white);
-  color: var(--ink);
-}
-
-.lunar-story-card {
-  background: var(--moon-deep);
-  color: var(--white);
-}
-
-.mnemonic-inspector-box {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 26px;
-  align-items: center;
-  flex: 1 1 auto;
-}
-
-.mnemonic-svg {
-  width: 200px;
-  height: 200px;
-}
-
-.m-stroke {
-  fill: none;
-  stroke: var(--paper-deep);
-  stroke-width: 8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: stroke 180ms ease;
-}
-
-.m-stroke.is-lit {
-  stroke: var(--sun-stroke);
-}
-
-.mnemonic-copy h3,
-.lunar-story-card h3 {
-  font-size: 30px;
-  line-height: 1.25;
+.jukugo-kana {
+  font-size: 22px;
   font-weight: 800;
-  margin-top: 14px;
-  margin-bottom: 12px;
+  color: var(--ink);
 }
 
-.mnemonic-copy p {
-  font-size: 20px;
-  line-height: 1.55;
+.jukugo-romaji {
+  font-size: 18px;
+  font-weight: 700;
   color: var(--muted);
 }
 
-.mnemonic-copy strong {
-  color: var(--ink);
-}
-
-.mnemonic-tip {
-  margin-top: auto;
-  padding: 14px 18px;
-  border-radius: 10px;
-  background: var(--sun-soft);
-  border: 2px solid var(--sun-stroke);
-  color: var(--sun-ink);
-  font-size: 16px;
+.jukugo-meaning {
+  font-size: 20px;
   font-weight: 700;
-}
-
-.lunar-story-card h3 {
-  margin-top: 0;
-  color: var(--white);
-}
-
-.lunar-story-card > p {
-  font-size: 18px;
-  line-height: 1.55;
-  color: var(--moon-mist);
-  margin-bottom: 18px;
-}
-
-.lunar-story-card strong {
-  color: var(--gold);
-}
-
-.sibling-grid {
-  margin-top: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.sibling-item {
-  background: var(--moon);
-  border: 2px solid var(--gold);
-  border-radius: 10px;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.sibling-item strong {
-  font-size: 34px;
-  font-weight: 900;
-  color: var(--gold);
-  line-height: 1;
-}
-
-.sibling-item span {
-  font-size: 16px;
   line-height: 1.35;
-  color: var(--white);
-}
-
-.sibling-item ruby rt {
-  color: var(--gold);
-  font-size: 13px;
+  color: var(--ink);
 }
 
 /* SLIDE 4: JUKUGO & CONTOH KALIMAT */
@@ -1361,8 +1253,7 @@ mark rt {
 @media (hover: hover) and (pointer: fine) {
   .pill-toggle:hover,
   .icon-button:hover:not(:disabled),
-  .writer-btn:not(.writer-btn-primary):hover,
-  .part-chip:not(.is-selected):hover {
+  .writer-btn:not(.writer-btn-primary):hover {
     background: var(--paper-deep);
   }
 
@@ -1373,8 +1264,7 @@ mark rt {
   .arrow-controls .next:hover:not(:disabled),
   .writer-btn-primary:hover,
   .start-button:hover,
-  .restart-button:hover,
-  .part-chip-tei.is-selected:hover {
+  .restart-button:hover {
     background: var(--sun-gold-hover);
   }
 
@@ -1589,42 +1479,23 @@ mark rt {
     grid-template-rows: none;
   }
 
-  .mnemonic-equation-bar {
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  .jukugo-table thead th,
+  .jukugo-table tbody td {
+    padding: 14px 18px;
   }
 
-  .eq-label {
-    flex-basis: 100%;
+  .jukugo-pill {
+    font-size: 20px;
+    padding: 5px 12px;
   }
 
-  .part-chip {
-    flex: 1 1 auto;
-    min-width: 110px;
+  .jukugo-kana {
+    font-size: 19px;
   }
 
-  .mnemonic-columns {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-
-  .mnemonic-card {
-    padding: 22px 20px;
-  }
-
-  .mnemonic-inspector-box {
-    grid-template-columns: 160px 1fr;
-    gap: 18px;
-  }
-
-  .mnemonic-svg {
-    width: 160px;
-    height: 160px;
-  }
-
-  .mnemonic-copy p,
-  .lunar-story-card > p {
-    font-size: 16px;
+  .jukugo-romaji,
+  .jukugo-meaning {
+    font-size: 17px;
   }
 
   .examples-intro {
@@ -1792,52 +1663,52 @@ mark rt {
     font-size: 15px;
   }
 
-  .mnemonic-equation-bar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 12px;
+  .jukugo-table {
+    table-layout: auto;
   }
 
-  .eq-label {
-    grid-column: 1 / -1;
-    flex-basis: auto;
+  .col-jukugo {
+    width: 1%;
+    white-space: nowrap;
   }
 
-  .eq-op {
-    display: none;
+  .col-reading {
+    width: 31%;
   }
 
-  .part-chip[data-part="all"] {
-    grid-column: 1 / -1;
+  .col-meaning {
+    width: auto;
   }
 
-  .part-chip {
-    min-width: 0;
-    padding: 8px 10px;
-    gap: 6px;
+  .jukugo-table thead th {
+    font-size: 13px;
+    padding: 11px 8px;
   }
 
-  .part-glyph {
-    font-size: 20px;
+  .jukugo-table tbody td {
+    padding: 10px 8px;
   }
 
-  .part-name {
+  .jukugo-pill {
+    font-size: 15px;
+    padding: 4px 8px;
+    white-space: nowrap;
+  }
+
+  .jukugo-kana {
+    display: block;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .jukugo-romaji {
+    display: block;
     font-size: 13px;
   }
 
-  .mnemonic-inspector-box {
-    grid-template-columns: 1fr;
-  }
-
-  .mnemonic-svg {
-    width: 170px;
-    height: 170px;
-    margin: 0 auto;
-  }
-
-  .sibling-grid {
-    grid-template-columns: 1fr;
+  .jukugo-meaning {
+    font-size: 14px;
+    line-height: 1.3;
   }
 
   .example-grid {
@@ -1983,8 +1854,7 @@ mark rt {
   .noscript-note,
   .start-button,
   .restart-button,
-  .writer-controls,
-  .mnemonic-equation-bar {
+  .writer-controls {
     display: none !important;
   }
 

@@ -23,48 +23,9 @@
   const strokePlayLabel = document.querySelector('#stroke-play-label');
   const strokeResetBtn = document.querySelector('#stroke-reset-btn');
 
-  const partButtons = [...document.querySelectorAll('[data-part]')];
-  const mnemonicStrokes = [...document.querySelectorAll('#mnemonic-kanji-svg [data-part-stroke]')];
-  const mnemonicBadgeText = document.querySelector('#mnemonic-badge-text');
-  const mnemonicFocusTitle = document.querySelector('#mnemonic-focus-title');
-  const mnemonicFocusBody = document.querySelector('#mnemonic-focus-body');
-
   let currentSlide = 0;
   let transitionTimer;
   let toastTimer;
-
-  const MNEMONIC_DATA = {
-    all: {
-      badge: 'Asal Bentuk & Cerita Visual',
-      title: 'Mulut (<span lang="ja">口</span>) Dikunci Palu Izin (<span lang="ja">丁</span>)',
-      body: 'Garis datar atas <strong lang="ja">一</strong> dan kail tegak <strong lang="ja">亅</strong> membentuk tanda paku <strong lang="ja">丁</strong> yang memayungi mulut <strong lang="ja">口</strong>. Bayangkan ucapan setuju yang sah disematkan: <strong>boleh, dapat, dan mungkin</strong>.',
-      lit: ['s1', 'mouth', 's5']
-    },
-    s1: {
-      badge: 'Komponen 1 · Guratan 1',
-      title: 'Atap Datar (<span lang="ja">一</span>)',
-      body: 'Garis datar paling atas berfungsi sebagai penanda naungan dan awal tarikan huruf <strong lang="ja">可</strong> sekaligus bagian kepala komponen <strong lang="ja">丁</strong>.',
-      lit: ['s1']
-    },
-    mouth: {
-      badge: 'Komponen 2 · Radikal Utama',
-      title: 'Radikal Mulut (<span lang="ja">口</span> · Kuchi)',
-      body: 'Kotak kecil di tengah adalah radikal <strong lang="ja">口</strong> (mulut, 3 guratan). Dalam kanji <strong lang="ja">可</strong>, mulut menjadi inti suara yang mengucapkan kata persetujuan.',
-      lit: ['mouth']
-    },
-    s5: {
-      badge: 'Komponen 3 · Guratan Terakhir',
-      title: 'Kail Penutup (<span lang="ja">亅</span>)',
-      body: 'Guratan ke-5 turun lurus di sisi kanan lalu berkait ke arah kiri, mengunci struktur kanan dan memberi kesan tegas pada kanji <strong lang="ja">可</strong>.',
-      lit: ['s5']
-    },
-    tei: {
-      badge: 'Gabungan Ringkas (2 Bagian)',
-      title: 'Rumus Cepat: <span lang="ja">丁 + 口 = 可</span>',
-      body: 'Agar paling cepat dihafal saat ujian: bayangkan paku berbentuk T berkail (<strong lang="ja">丁</strong>) mengetuk persetujuan di samping mulut (<strong lang="ja">口</strong>), menandakan hal itu diizinkan.',
-      lit: ['s1', 'mouth', 's5']
-    }
-  };
 
   let strokeLengths = [];
   let writerRafId = null;
@@ -198,23 +159,6 @@
     phaseStartMs = 0;
     updatePlayButtonUI();
     writerRafId = requestAnimationFrame(tickWriter);
-  }
-
-  function selectMnemonicPart(partKey) {
-    const entry = MNEMONIC_DATA[partKey];
-    if (!entry) return;
-    partButtons.forEach(btn => {
-      const selected = btn.dataset.part === partKey;
-      btn.classList.toggle('is-selected', selected);
-      btn.setAttribute('aria-pressed', String(selected));
-    });
-    mnemonicStrokes.forEach(path => {
-      const lit = entry.lit.includes(path.dataset.partStroke);
-      path.classList.toggle('is-lit', lit);
-    });
-    if (mnemonicBadgeText) mnemonicBadgeText.textContent = entry.badge;
-    if (mnemonicFocusTitle) mnemonicFocusTitle.innerHTML = entry.title;
-    if (mnemonicFocusBody) mnemonicFocusBody.innerHTML = entry.body;
   }
 
   function fitStage() {
@@ -411,10 +355,6 @@
     });
   }
 
-  partButtons.forEach(btn => {
-    btn.addEventListener('click', () => selectMnemonicPart(btn.dataset.part));
-  });
-
   window.addEventListener('hashchange', () => goToSlide(readHash(), { updateHash: false }));
   new ResizeObserver(fitStage).observe(stage);
 
@@ -512,7 +452,6 @@
 
   initStrokeMetrics();
   updatePlayButtonUI();
-  selectMnemonicPart('all');
   fitStage();
   goToSlide(readHash(), { updateHash: Boolean(location.hash), animate: false });
 })();
